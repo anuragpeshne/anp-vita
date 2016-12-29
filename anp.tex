@@ -111,15 +111,15 @@
 \renewcommand{\date}[1]{{\addfontfeature{Numbers=OldStyle} #1}}
 \renewcommand{\labelitemi}{-}
 
-\setmainfont[
-  Ligatures={TeX,Common},
-  BoldFont={AGaramondPro-Semibold},
-]{Adobe Garamond Pro}
-\setsansfont[
-  Ligatures={TeX,Common},
-  Letters=SmallCaps,
-  Color=660000,
-]{Adobe Garamond Pro}
+%% \setmainfont[
+%%   Ligatures={TeX,Common},
+%%   BoldFont={AGaramondPro-Semibold},
+%% ]{Adobe Garamond Pro}
+%% \setsansfont[
+%%   Ligatures={TeX,Common},
+%%   Letters=SmallCaps,
+%%   Color=660000,
+%% ]{Adobe Garamond Pro}
 %%\setmonofont[Scale=0.85]{FontAwesome}
 %%\newfontfamily{\lstMonaco}[Scale=.85]{monaco}
 
@@ -164,8 +164,8 @@
 \mhead{Education}%
 \textbf{Master of Science} in Computer Science \rdate{May 2018} \newline
 \emph{University Of Florida,} Gainesville, Florida
-%%\begin{itemize*}
-  %% \item Cumulative GPA: 3.44/4.00; {Energy Systems Specialization}
+\begin{itemize*}
+  \item Cumulative GPA: 4.00/4.00;
   %% \item Thesis: \href{https://dl.dropboxusercontent.com/u/10724484/resume/pdg_thesis.pdf}{One-Dimensional Model of a Refrigeration Cycle Compressor Test Block}
   %% \item Advisor: Dr.~Margaret M.~Mathison
 %  \item Coursework:\newline
@@ -177,7 +177,7 @@
 %      Statistical Thermodynamics & Combustion \\
 %      \bottomrule
 %    \end{tabular}
-%\end{itemize*}
+\end{itemize*}
 
 \medskip
 \textbf{Bachelor of Technology} in Computer Science and Engineering \rdate{April 2013}\newline
@@ -211,10 +211,11 @@ Vim
 
 \medskip
 \emph{Basic knowledge}\newline%—would require some training/use to refresh my memory
+Clojure,
 Bash,
 Scheme,
-EmacsLisp,
-\LaTeX{}
+EmacsLisp
+
 
 %% \bigskip
 %% \mhead{Honors \& \newline Awards}%
@@ -266,21 +267,12 @@ EmacsLisp,
     front-end, Database table design and UI for monitoring sales.
 \end{itemize*}
 
-\medskip
-\textbf{OfficeBox} Nagpur, India \newline
-\emph{Intern} \rdate{Summer 2011}
-\begin{itemize*}
-  \item Rewrote all style tags to a single style sheet, reduced lines of code by %
-    \textbf{70\%}
-  \item Improved page load time and cross browser compatibility (\textbf{IE 7+})
-\end{itemize*}
-
 \bigskip
 \mhead{Personal \newline Projects}
+\textbf{\href{https://github.com/anuragpeshne/httpj}{httpj}:} HTTP %
+server implementation using TCP sockets \rltag{Clojure} \\
 \textbf{\href{https://github.com/anuragpeshne/vKeyboard}{vKeyboard}:} share %
-keyboard across Linux machines over the network \rltag{C} \\
-\textbf{\href{https://github.com/anuragpeshne/funJmp}{funJmp}:} Vim %
-plugin to jump to function definition without index (TAGS) \rltag{VimL}\\
+keyboard across machines over the network \rltag{Python} \\
 \textbf{\href{https://github.com/anuragpeshne/austerity}{austerity}:} self help %
 script to prevent browsing certain websites \rltag{shell}\\
 \textbf{\href{https://github.com/transOSTeam/wordPuzz}{wordPuzz}:} word puzzle %
