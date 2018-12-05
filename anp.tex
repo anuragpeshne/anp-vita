@@ -1,4 +1,5 @@
-\documentclass[12pt,a4paper]{article}
+\errorcontextlines 10000
+\documentclass[12pt,english]{article}
 
 \def\myauthor{Anurag Peshne}
 \def\mytitle{Resume-Anurag Peshne}
@@ -33,7 +34,9 @@
 \usepackage[adobe-garamond]{mathdesign}
 \usepackage[no-math]{fontspec}
 \usepackage{microtype}
-\usepackage[margin=0.8in,top=0.8in,right=0.8in,left=2in]{geometry}
+\usepackage[a4paper,bindingoffset=0.2in,%
+            left=1.8in,right=.8in,top=.8in,bottom=.8in,%
+            footskip=.25in]{geometry}
 \usepackage[strict]{changepage}
 \usepackage[
   ocgcolorlinks,
@@ -111,17 +114,17 @@
 \renewcommand{\date}[1]{{\addfontfeature{Numbers=OldStyle} #1}}
 \renewcommand{\labelitemi}{-}
 
-%% \setmainfont[
-%%   Ligatures={TeX,Common},
-%%   BoldFont={AGaramondPro-Semibold},
-%% ]{Adobe Garamond Pro}
-%% \setsansfont[
-%%   Ligatures={TeX,Common},
-%%   Letters=SmallCaps,
-%%   Color=660000,
-%% ]{Adobe Garamond Pro}
-%%\setmonofont[Scale=0.85]{FontAwesome}
-%%\newfontfamily{\lstMonaco}[Scale=.85]{monaco}
+\setmainfont[
+  Ligatures={TeX,Common},
+  BoldFont={SourceSerifPro-Semibold},
+]{Source Serif Pro}
+\setsansfont[
+  Ligatures={TeX,Common},
+  Letters=SmallCaps,
+  Color=660000,
+]{Source Sans Pro}
+\setmonofont[Scale=0.85]{Source Code Variable}
+%\newfontfamily{\lstMonaco}[Scale=.85]{monaco}
 
 \makeatletter % fix for \hrulefill w/ mathdesign package
 \def\hrulefill{\leavevmode\leaders \hrule height \rulethickness \hfill\kern\z@}
@@ -140,14 +143,14 @@
 }
 \hfill\hfill\hfill
 {
-  \begin{minipage}[b]{2in}
-    \flushleft \footnotesize
-    3800, SW 34\textsuperscript{th} Street \\
-    Apartment II 359 \\
-    Gainesville, FL~~32608
-  \end{minipage}
+%  \begin{minipage}[b]{2in}
+%    \flushleft \footnotesize
+%    736 8th Ave NE\\
+%    \#122\\
+%    Issaquah, WA~~98029
+%  \end{minipage}
   \hfill
-  \begin{minipage}[b]{1.4in}
+  \begin{minipage}[b]{1.7in}
     \flushright \footnotesize
     \href{tel:\myphone}{\myphone} \\ %\texttt{}~
     \href{mailto:\myemail}{\myemail} \\
@@ -165,9 +168,11 @@
 \textbf{Master of Science} in Computer Science \rdate{August 2018} \newline
 \emph{University Of Florida,} Gainesville, Florida
 \begin{itemize*}
-  \item Cumulative GPA: 4.00/4.00
+  \item GPA: 4.00/4.00
+  \item Thesis:
+    \href{https://github.com/anuragpeshne/gpu-cgoptimization-thesis/blob/master/main.pdf}{Enhancing
+     the Parallel Programming Environment SIA/ACES4 with GPU Support and Data Prefetching}
   \item Advisor: Dr. Beverly Sanders
-  \item Thesis: \href{https://github.com/anuragpeshne/anp-vita/blob/master/anp.pdf}{Enhancements to Looping Constructs By Prefetching and Exploiting GPU}
 %  \item Coursework:\newline
 %    \begin{tabular}{ll}
 %      \addlinespace\toprule
@@ -183,7 +188,7 @@
 \textbf{Bachelor of Technology} in Computer Science and Engineering \rdate{April 2013}\newline
 \emph{Visvesvaraya National Institute of Technology,} Nagpur, India
 \begin{itemize*}
-  \item Cumulative GPA: 7.06/10.00
+  \item GPA: 7.06/10.00
   \item Senior Project: %\href{https://github.com/transOSTeam/transOS}{
     File System simulation for classroom learning
   %% \item Advisors: Prof.~Thomas J.~Labus and Dr.~Vincent C.~Prantil
@@ -202,15 +207,15 @@ Python,
 Node.js,
 Java,
 C,
+C++,
 JavaScript,
-Elixir/Erlang
 PHP,
 Git,
-Unix,
+Unix
 
 \medskip
 \emph{Basic knowledge}\newline%—would require some training/use to refresh my memory
-C++,
+Elixir,
 Clojure,
 Bash,
 Scheme,
@@ -228,7 +233,14 @@ Standard ML
 
 \bigskip
 \mhead{Professional \newline Experience}%
-\textbf{University Of Florida} Gainesville, Florida \newline
+\textbf{Microsoft Corporation}, Redmond, Washington \newline
+\emph{Software Engineer} \rdate{\textsc{june}~2018–present}
+\begin{itemize*}
+  \item Wrote templates and automation scripts for deployment of SAP HANA cluster on Azure.
+\end{itemize*}
+
+\medskip
+\textbf{University Of Florida}, Gainesville, Florida \newline
 \emph{Graduate Research Assistant} \rdate{\textsc{may}~2017–\textsc{may}~2018}
 \begin{itemize*}
   \item Working with \href{https://github.com/UFParLab/aces4}{aces4}: Parallel Computational
@@ -236,7 +248,7 @@ Standard ML
 \end{itemize*}
 
 \medskip
-\textbf{CouponDunia Media Pvt Ltd,} Mumbai, India \newline
+\textbf{CouponDunia Media Pvt Ltd}, Mumbai, India \newline
 \emph{Senior Software Engineer} \rdate{\textsc{april}~2015–\textsc{july}~2016}
 \begin{itemize*}
   \item Led a team of 4 to develop a tool for comparing prices at online %
@@ -246,27 +258,23 @@ Standard ML
   \item Wrote \code{titleParser} -- extractor of product attributes from product %
     title
 \end{itemize*}
-
 \smallskip
 \emph{Software Engineer} \rdate{\textsc{july}~2014–\textsc{march}~2015}
 \begin{itemize*}
   \item Part of web team, rewrote models and controllers for online coupons, %
     reduced number of database queries by more than \textbf{50}\%
-  \item Maintained mass email sending service; reduced time required to %
-    send mails to million subscribers from \textbf{4 hours} to \textbf{30 minutes}
 \end{itemize*}
 
 \medskip
-\textbf{Oracle Corporation, Server Technologies,} Bangalore, India \newline
+\textbf{Oracle Corporation}, Bangalore, India \newline
 \emph{Member Technical Staff} \rdate{\textsc{june}~2013-\textsc{june}~2014}
 \begin{itemize*}
   \item Part of 2 member global team, responsible for sustained development of %
     \code{DataSource} component of WebLogic Server (Oracle J2EE Application Server)
-  \item Worked on fixing bugs and providing enhancements to Deployment and EJB components
 \end{itemize*}
 
 \bigskip
-\mhead{Personal\newline Projects}
+\mhead{Personal\newline Projects}%
 \textbf{\href{https://github.com/anuragpeshne/dsplotty}{Plotty}:} Distributed Systems visualizer %
 using WebSockets. \rltag{JavaScript} \\
 \textbf{\href{https://github.com/anuragpeshne/portal}{Portal}:} P2P file transfer
@@ -276,15 +284,19 @@ through browser using WebRTC \rltag{JavaScript}
 \end{itemize*}
 \textbf{\href{https://github.com/anuragpeshne/httpj}{httpj}:} HTTP %
 server implementation using TCP sockets \rltag{Clojure}
-\begin{itemize*}
-\item Supports > 1k concurrent connections
-\end{itemize*}
 \textbf{\href{https://github.com/anuragpeshne/vKeyboard}{vKeyboard}:} share %
 keyboard across machines over the network \rltag{Python} \\
 \textbf{\href{https://github.com/transOSTeam/wordPuzz}{wordPuzz}:} realtime multiplayer %
 word puzzle using WebSockets \rltag{JavaScript}
 
-\bigskip
-\mhead{Activities \& \newline Interests}%
-- Blog at \href{https://anuragpeshne.github.io/essays/}{anuragpeshne.github.io/essays}
+%\bigskip
+%\mhead{Activities \& \newline Interests}%
+%- Blog at \href{https://anuragpeshne.github.io/essays/}{anuragpeshne.github.io/essays}
 \end{document}
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-engine: xetex
+%%% End:
